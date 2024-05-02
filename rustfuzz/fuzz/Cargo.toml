@@ -1,0 +1,29 @@
+[package]
+name = "rustfuzz-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+libfuzzer-sys = "0.4"
+rand = "0.8.5"
+
+[dependencies.rustfuzz]
+path = ".."
+
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[[bin]]
+name = "calc"
+path = "fuzz_targets/calc.rs"
+test = false
+doc = false
+bench = false
