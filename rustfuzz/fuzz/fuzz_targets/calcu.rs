@@ -1,7 +1,7 @@
 extern crate rand;
 use rand::Rng;
 pub fn calculate(x: i32, y: i32) -> i32 {
-    let mut rng = rand::thread_rng();  // Create a random number generator
+    let mut rng = rand::thread_rng();  
     let num: i32 = rng.gen_range(0..4); 
     match num {
         1 => x+y,
